@@ -12,6 +12,13 @@ jobs:
       - uses: ./
         with:
           organization: octoaustenstone
-          github-token: ${{ secrets.GHAS_POLICY_AS_CODE_TOKEN }}
+          github-token: ${{ secrets.TOKEN }}
+          visibility: selected
+          visibility-repos: |
+            actions-angular
+            vulnerable-node
+          secrets-exclude: |
+            GITHUB_TOKEN
+            SUPER_SECRET
         env:
           SECRETS: ${{ toJson(secrets) }}
