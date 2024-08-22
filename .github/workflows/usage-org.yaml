@@ -12,7 +12,7 @@ jobs:
       - uses: austenstone/dependabot-secrets-sync@main
         with:
           organization: octoaustenstone
-          github-token: ${{ secrets.TOKEN }}
+          github-token: ${{ secrets.GHAS_POLICY_AS_CODE_TOKEN }}
           visibility: selected
           visibility-repos: |
             actions-angular
